@@ -1,0 +1,12 @@
+{% autoescape off %}
+Hello.
+
+To complete registration, follow the link:
+
+{{ protocol }}://{{ domain }}{% url 'signin' %}
+
+If you did not make this request, you can simply ignore this email.
+
+Sincerely,
+The Website Team
+{% endautoescape %}

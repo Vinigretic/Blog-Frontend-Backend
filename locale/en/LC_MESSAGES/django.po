@@ -1,0 +1,291 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-17 13:47+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\BlogSPA\settings.py:136
+msgid "Ukrainian"
+msgstr ""
+
+#: .\BlogSPA\settings.py:137
+#: .\venv\Lib\site-packages\graphene_django\tests\test_converter.py:202
+msgid "English"
+msgstr ""
+
+#: .\BlogSPA\settings.py:138
+msgid "Russian"
+msgstr ""
+
+#: .\myblog\forms.py:17 .\myblog\forms.py:92 .\templates\myblog\signin.html:26
+#: .\templates\myblog\signup.html:27
+msgid "Имя пользователя"
+msgstr "Username"
+
+#: .\myblog\forms.py:35 .\myblog\forms.py:100 .\templates\myblog\signin.html:28
+#: .\templates\myblog\signup.html:31
+msgid "Пароль"
+msgstr "Password"
+
+#: .\myblog\forms.py:44 .\templates\myblog\signup.html:33
+msgid "Повторите пароль"
+msgstr "Password again "
+
+#: .\myblog\forms.py:55
+msgid "Такое имя пользователя уже существует"
+msgstr "This username already exists"
+
+#: .\myblog\forms.py:57
+msgid "Пользователь с таким Email уже существует"
+msgstr "This Email already exists"
+
+#: .\myblog\forms.py:60
+msgid "Пароли не совпадают"
+msgstr "Passwords do not match"
+
+#: .\myblog\forms.py:109
+msgid "Вы ввели некорректное имя пользователя или пароль"
+msgstr "You entered an incorrect username or password"
+
+#: .\myblog\forms.py:118 .\templates\myblog\contact.html:40
+msgid "Ваше имя"
+msgstr "Your name"
+
+#: .\myblog\forms.py:126 .\templates\myblog\contact.html:46
+msgid "Ваша почта"
+msgstr "Your email"
+
+#: .\myblog\forms.py:134 .\templates\myblog\contact.html:55
+msgid "Тема"
+msgstr "Topic"
+
+#: .\myblog\forms.py:142 .\templates\myblog\contact.html:64
+msgid "Ваше сообщение"
+msgstr "Your message"
+
+#: .\myblog\views.py:130
+msgid ""
+"На ваш email была отправлена ссылка. Для завершения регистрации пройдите по "
+"этой ссылке."
+msgstr "A link has been sent to your email. To complete registration, go to "
+"this link."
+
+#: .\myblog\views.py:160
+msgid "Чтобы связаться со мной, заполните форму обратной связи."
+msgstr "To contact me fill out the feedback form"
+
+#: .\myblog\views.py:183
+msgid "Ваше письмо отправлено! Спасибо!"
+msgstr "Your letter has been sent! Thank you!"
+
+#: .\templates\myblog\block\aside.html:4
+msgid "Теги"
+msgstr "Tags"
+
+#: .\templates\myblog\block\aside.html:17
+msgid "Последние статьи"
+msgstr "Latest articles"
+
+#: .\templates\myblog\block\aside.html:23 .\templates\myblog\home.html:27
+#: .\templates\myblog\tag.html:29
+msgid "Подробнее"
+msgstr "In more detail"
+
+#: .\templates\myblog\block\comments.html:3
+msgid "Прокомментируй"
+msgstr "Make comments"
+
+#: .\templates\myblog\block\comments.html:15 .\templates\myblog\contact.html:70
+#: .\templates\myblog\password\password_reset_form.html:15
+msgid "Отправить"
+msgstr "Send"
+
+#: .\templates\myblog\block\comments.html:19
+msgid "Авторизуйтесь"
+msgstr "Login"
+
+#: .\templates\myblog\block\comments.html:19
+msgid "или"
+msgstr "or"
+
+#: .\templates\myblog\block\comments.html:19
+msgid "зарегистрируйтесь"
+msgstr "register"
+
+#: .\templates\myblog\block\comments.html:19
+msgid "чтобы оставить комментарий"
+msgstr "to leave a comment"
+
+#: .\templates\myblog\block\comments.html:38
+msgid "Ответить"
+msgstr "Reply"
+
+#: .\templates\myblog\block\footer.html:5
+msgid "Наверх"
+msgstr "Top"
+
+#: .\templates\myblog\block\footer.html:7
+msgid "Просто блог!"
+msgstr "Just a blog!"
+
+#: .\templates\myblog\block\navbar.html:17 .\templates\myblog\contact.html:15
+#: .\templates\myblog\post_detail.html:16 .\templates\myblog\search.html:27
+#: .\templates\myblog\success.html:15
+msgid "Главная"
+msgstr "Home"
+
+#: .\templates\myblog\block\navbar.html:20 .\templates\myblog\contact.html:16
+#: .\templates\myblog\success.html:16
+msgid "Контакты"
+msgstr "Contacts"
+
+#: .\templates\myblog\block\navbar.html:28
+msgid "Язык"
+msgstr "language"
+
+#: .\templates\myblog\block\navbar.html:42 .\templates\myblog\block\search_form
+#: delete.html:9 .\templates\myblog\search.html:14
+#: .\templates\myblog\search.html:28 .\templates\myblog\tag.html:3
+msgid "Поиск"
+msgstr "Search"
+
+#: .\templates\myblog\block\navbar.html:49
+msgid "Выход"
+msgstr "Logout"
+
+#: .\templates\myblog\block\navbar.html:51 .\templates\myblog\signin.html:3
+msgid "Вход"
+msgstr "Login"
+
+#: .\templates\myblog\block\navbar.html:52 .\templates\myblog\signup.html:35
+msgid "Регистрация"
+msgstr "Registration"
+
+#: .\templates\myblog\block\slider.html:13
+#: .\templates\myblog\block\slider.html:14
+#: .\templates\myblog\block\slider.html:25
+#: .\templates\myblog\block\slider.html:26
+#: .\templates\myblog\block\slider.html:32
+#: .\templates\myblog\block\slider.html:33
+msgid "описание"
+msgstr "description"
+
+#: .\templates\myblog\contact.html:19
+msgid "Форма обратной связи"
+msgstr "Feedback form"
+
+#: .\templates\myblog\home.html:11
+msgid "Последние записи блога"
+msgstr "Latest blog entries"
+
+#: .\templates\myblog\home.html:43 .\templates\myblog\home.html:46
+#: .\templates\myblog\search.html:46 .\templates\myblog\search.html:49
+msgid "Предыдущая"
+msgstr "Previous"
+
+#: .\templates\myblog\home.html:57 .\templates\myblog\home.html:60
+#: .\templates\myblog\search.html:60 .\templates\myblog\search.html:63
+msgid "Следующая"
+msgstr "Next"
+
+#: .\templates\myblog\password\password_reset_complete.html:3
+#: .\templates\myblog\password\password_reset_form.html:3
+msgid "Сброс пароля"
+msgstr "Password reset"
+
+#: .\templates\myblog\password\password_reset_complete.html:7
+msgid "Пароль изменен"
+msgstr "Password changed"
+
+#: .\templates\myblog\password\password_reset_complete.html:8
+msgid "Вы можете"
+msgstr "You can"
+
+#: .\templates\myblog\password\password_reset_complete.html:8
+msgid "войти в свой аккаунт"
+msgstr "login to your account"
+
+#: .\templates\myblog\password\password_reset_confirm.html:3
+#: .\templates\myblog\password\password_reset_done.html:3
+#: .\templates\myblog\password\password_reset_done.html:7
+msgid "Изменение пароля"
+msgstr "Change Password "
+
+#: .\templates\myblog\password\password_reset_confirm.html:6
+msgid "Измените ваш пароль"
+msgstr "change your Password"
+
+#: .\templates\myblog\password\password_reset_confirm.html:8
+msgid "Пожалуйста, введите новый пароль:"
+msgstr "Please enter new password"
+
+#: .\templates\myblog\password\password_reset_confirm.html:12
+msgid "Изменить пароль"
+msgstr "To change password "
+
+#: .\templates\myblog\password\password_reset_done.html:8
+msgid "Мы отправили вам инструкцию по установке пароля на ваш email."
+msgstr "We have sent you instructions on how to set a password to your email."
+
+#: .\templates\myblog\password\password_reset_done.html:9
+msgid ""
+"Если вы не получили электронное письмо, убедитесь, что вы ввели адрес, "
+"который вы указали при регистрации."
+msgstr "If you didn't receive an email, please make sure you entered the address, "
+"which you provided during registration."
+
+#: .\templates\myblog\password\password_reset_form.html:12
+#: .\templates\myblog\signin.html:36
+msgid "Забыли пароль?"
+msgstr "Forgot your password?"
+
+#: .\templates\myblog\password\password_reset_form.html:13
+msgid "Пожалуйста, укажите ваш email"
+msgstr "Please enter your email"
+
+#: .\templates\myblog\post_detail.html:31
+msgid "Автор"
+msgstr "Author"
+
+#: .\templates\myblog\post_detail.html:33
+msgid "Опубликовано"
+msgstr "Published"
+
+#: .\templates\myblog\search.html:31
+msgid "Найдено записей"
+msgstr "Records found"
+
+#: .\templates\myblog\signin.html:25
+msgid "Пожалуйста укажите логин и пароль"
+msgstr "Please enter your login and password"
+
+#: .\templates\myblog\signin.html:30
+msgid "Войти"
+msgstr "Login"
+
+#: .\templates\myblog\signin.html:33 .\templates\myblog\signup.html:38
+msgid "Войти через Google"
+msgstr "Login with Google"
+
+#: .\templates\myblog\signup.html:26
+msgid "Для регистрации укажите имя пользователя, email и пароль"
+msgstr "To register, enter your username and password"
+
+#: .\templates\myblog\tag.html:11
+msgid "Другие теги"
+msgstr "Others tags"
+

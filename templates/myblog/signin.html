@@ -1,0 +1,38 @@
+{% extends './base.html' %}
+{% load static i18n %}
+{% block title %}{% trans 'Вход' %}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="text-center col-5">
+            {% if form.errors %}
+                {% for field in form %}
+                    {% for error in field.errors %}
+                        <div class="alert alert-danger">
+                            <strong>{{ error|escape }}</strong>
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+                {% for error in form.non_field_errors %}
+                    <div class="alert alert-danger">
+                        <strong>{{ error|escape }}</strong>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <form class="form-signin" method="post" action="{% url 'signin' %}">
+                {% csrf_token %}
+                <h1 class="h3 mb-3 mt-3 font-weight-normal">{% trans 'Пожалуйста укажите логин и пароль' %}</h1>
+                <label for="inputUsername" class="sr-only">{% trans 'Имя пользователя' %}</label>
+                {{ form.username }}
+                <label for="inputPassword" class="sr-only">{% trans 'Пароль' %}</label>
+                {{ form.password }}
+                <button class="btn mt-2 btn-lg btn-primary btn-block" type="submit">{% trans 'Войти' %}</button>
+            </form>
+            <div>
+                <a href="{% url 'password_reset_form' %}" class="btn mt-2 btn-lg btn-primary btn-block">{% trans 'Забыли пароль?' %}</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% load static i18n %}
+<nav class="navbar navbar-expand navbar-dark bg-dark sticky-top">
+        <a href="#" class="navbar-brand">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="30" height="30" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a href="{% url 'home' %}" class="nav-link">{% trans 'Главная' %}</a>
+                </li>
+                <li class="nav-item ">
+                    <a href="{% url 'contact' %}" class="nav-link">{% trans 'Контакты' %}</a>
+                </li>
+            </ul>
+            <form action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ redirect_to }}">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans 'Язык' %}</a>
+                            <div  class="dropdown-menu" aria-labelledby="navbarDropdown" name="language">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% for language in languages %}
+                                    <a class="dropdown-item" href="/{{ language.code }}">{{language.name_local}}</a>
+                                {% endfor %}
+                            </div>
+                        </li>
+                    </ul>
+            </form>
+            <form action="{% url 'search_results' %}" method="get" class="form-inline my-2 my-lg-0">
+                  <input name="q" type="text" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0 mr-2" type="submit">{% trans 'Поиск' %}</button>
+            </form>
+            {% if user.is_authenticated %}
+            <div style="text-transform: capitalize;">
+                <span class="btn btn-outline-light mr-2" style="color: blue;">{{ user }}</span>
+            </div>
+
+            <a href="{% url 'signout' %}" class="btn btn-outline-light">{% trans 'Выход' %}</a>
+            {% else %}
+            <a href="{% url 'signin' %}" class="btn btn-outline-light mr-2">{% trans 'Вход' %}</a>
+            <a href="{% url 'signup' %}" class="btn btn-outline-light mr-2">{% trans 'Регистрация' %}</a>
+            {% endif %}
+
+        </div>
+</nav>
+
+

@@ -1,0 +1,53 @@
+{% load static i18n %}
+<div class="card my-4">
+    <h5 class="card-header">{% trans 'Прокомментируй' %}:</h5>
+    {% if user.is_authenticated %}
+    <div class="card-body">
+        <form action = "{% url 'add_comment' post.id %}" method = "post" id="formComment">
+            {% csrf_token %}
+            <input type = "hidden" name = "parent" id = "contactparent" value = "">
+            <div class="form-group">
+                <textarea class="form-control border" rows="5" name="text"
+                                      id="contactcomment" required=""></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">{% trans 'Отправить' %}</button>
+        </form>
+    </div>
+    {% else %}
+    <h6 class="card-header"><a href="{% url 'signin' %}">{% trans 'Авторизуйтесь' %}</a> {% trans 'или' %} <a href="{% url 'signup' %}"> {% trans 'зарегистрируйтесь' %} </a> {% trans 'чтобы оставить комментарий' %}</a></h6>
+    {% endif %}
+</div>
+
+{% for comment in post.comments.all %}
+    <div class="media mb-2">
+        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+        <div class="media-body">
+            {% if comment.parent_id is None %}
+            <div style="text-transform: capitalize;">
+                <h5 class="mt-0">{{comment.username}}</h5>
+            </div>
+            <p>{{comment.text}}</p>
+            <p>{{comment.created_date}}</p>
+            <a href="#formComment" onclick="addComment('{{ comment.username }}', '{{ comment.id }}' )">{% trans 'Ответить' %}</a>
+            {% endif %}
+            {% for com in comment.comment_set.all %}
+                <div class="media mt-2">
+                    <div class="media-body" style="margin-left: 50px">
+                        <div style="text-transform: capitalize;">
+                            <h5 class="mt-0">{{ com.username }}</h5>
+                        </div>
+                        <p class="mt-2">{{ com.text }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endfor %}
+
+
+<script>
+    function addComment(name, id) {
+        document.getElementById("contactparent").value = id;
+        document.getElementById("contactcomment").innerText = `${name},`
+        }
+</script>
